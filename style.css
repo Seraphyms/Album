@@ -1,0 +1,110 @@
+body {
+    /*background: linear-gradient(135deg, #f2daa6, #9cdbec);*/
+        background-image: url(Wallpaper.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    font-family: "Smooch Sans", sans-serif;    
+}
+
+h1{
+    text-align: center;
+    font-size: 4em;
+    margin: -10;
+    padding: -20;
+}
+    h2{
+        text-align: center;
+        font-size: 2em;
+        margin: -10;
+        padding: -20;
+    }
+
+    h2 a{
+        text-decoration: none;
+    }
+
+    h2 a:hover{
+        color: rgb(160, 199, 240);
+    }
+
+    h2 a:visited{
+        color: rgb(160, 199, 240);
+    }
+
+.Stars {
+    text-align: center;
+    margin: 30;
+}
+
+#cover{
+    border: 10px ridge rgb(222, 199, 131);
+    border-radius: 15px;
+    animation: 4.8s ease-in-out 1s infinite reverse both running Horiz;
+}
+
+h3{
+    font-size: 3em;
+    text-align: center;
+
+}
+
+h4{
+    font-size: 1.5em;
+    margin: -10;
+    text-align: center;
+}
+
+    ul{
+        margin-left: 37%;
+        font-size: 1.3em;   
+    }
+
+    ul i{
+        color: rgb(136, 199, 224);
+    }
+
+div {
+    display:flex;
+    gap: 8.7em;
+    margin-bottom: 100px;
+}
+
+#baby {
+    border: 5px ridge rgb(168, 143, 111) ;
+    border-radius: 15px;
+    cursor: cell;
+     animation: 5s ease-in-out 1s infinite reverse both running vague;
+}
+
+#bag {
+    border: 5px ridge rgb(160, 199, 240);
+    border-radius: 15px;
+    cursor: cell;
+    animation: 4.8s ease-in-out 1s infinite reverse both running vague;
+}
+
+#good {
+    border: 5px ridge gray;
+    border-radius: 15px;
+    cursor: cell;
+     animation: 4.5s ease-in-out 1s infinite reverse both running vague;
+}
+
+@keyframes vague {
+  0%, 100% { transform: translateY(0);
+            box-shadow: 0 0 0px rgba(255, 255, 255, 0.5); }
+  50% { transform: translateY(-15px);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+}
+
+@keyframes Horiz {
+    0%, 100% { }
+    75% { }
+    50% { }
+    25% { }
+}
