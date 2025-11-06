@@ -71,7 +71,7 @@ h4{
 
 div {
     display:flex;
-    gap: 8.7em;
+    justify-content: center;justify-content: space-around;
     margin-bottom: 100px;
 }
 
