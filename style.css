@@ -9,16 +9,16 @@ body {
     font-weight: bold;
     color:rgb(255, 255, 255);
     font-family: "Smooch Sans", sans-serif;    
+    margin:50px;
+    text-align: center;
 }
 
 h1{
-    text-align: center;
     font-size: 4em;
     margin: -10;
     padding: -20;
 }
     h2{
-        text-align: center;
         font-size: 2em;
         margin: -10;
         padding: -20;
@@ -38,7 +38,6 @@ h1{
     }
 
 .Stars {
-    text-align: center;
     margin: 30;
 }
 
@@ -50,36 +49,36 @@ h1{
 
 h3{
     font-size: 3em;
-    text-align: center;
 
 }
 
 h4{
     font-size: 1.5em;
     margin: -10;
-    text-align: center;
 }
 
     ul{
         margin-left: 37%;
         font-size: 1.3em;   
+        text-align: left;
     }
 
     ul i{
         color: rgb(136, 199, 224);
     }
 
-div {
+.container {
     display:flex;
-    gap: 8.7em;
-    margin-bottom: 100px;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
 }
 
 #baby {
     border: 5px ridge rgb(168, 143, 111) ;
     border-radius: 15px;
     cursor: cell;
-     animation: 5s ease-in-out 1s infinite reverse both running vague;
+    animation: 5s ease-in-out 1s infinite reverse both running vague;
 }
 
 #bag {
@@ -103,9 +102,6 @@ div {
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
 }
 
-@keyframes Horiz {
-    0%, 100% { }
-    75% { }
-    50% { }
-    25% { }
+footer{
+    font-size: 1.3em;
 }
