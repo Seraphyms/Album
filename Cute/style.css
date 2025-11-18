@@ -80,3 +80,90 @@ header #Author{
 header p{
     font-size: 1.6em;
 }
+
+/* Conteneur du carrousel */
+#carousel {
+    position: relative;
+    width: 40vw;
+    height: auto; /* ← le carrousel s’adapte */
+    overflow-x: hidden; /* ← le texte peut sortir */
+    border-radius: 25px;
+    margin: 40px auto;
+}
+
+/* cacher les radio */
+#carousel input { display: none; }
+
+/* slider (6 images -> 600%) */
+.slides {
+    display: flex;
+    width: 600%;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* chaque image occupe 1/6 de la ligne */
+.slides img {
+    width: calc(100% / 6);
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* déplacements selon l'image sélectionnée */
+#slide1:checked ~ .slides { transform: translateX(calc(-100% * 0 / 6)); } /* 0%  */
+#slide2:checked ~ .slides { transform: translateX(calc(-100% * 1 / 6)); } /* -16.666...% of .slides = -1 container width */
+#slide3:checked ~ .slides { transform: translateX(calc(-100% * 2 / 6)); }
+#slide4:checked ~ .slides { transform: translateX(calc(-100% * 3 / 6)); }
+#slide5:checked ~ .slides { transform: translateX(calc(-100% * 4 / 6)); }
+#slide6:checked ~ .slides { transform: translateX(calc(-100% * 5 / 6)); }
+
+/* Boutons navigation */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.15);
+    padding: 8px 14px;
+    font-size: 28px;
+    border-radius: 100px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    display: none;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
+/* Affichage des boutons pour chaque slide */
+#slide1:checked ~ #prev1, #slide1:checked ~ #next1 { display: block; }
+#slide2:checked ~ #prev2, #slide2:checked ~ #next2 { display: block; }
+#slide3:checked ~ #prev3, #slide3:checked ~ #next3 { display: block; }
+#slide4:checked ~ #prev4, #slide4:checked ~ #next4 { display: block; }
+#slide5:checked ~ #prev5, #slide5:checked ~ #next5 { display: block; }
+#slide6:checked ~ #prev6, #slide6:checked ~ #next6 { display: block; }
+
+/* Légendes */
+.captions p {
+    display: none;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 1.15em;
+    color: #4a3e38;
+}
+
+/* Affichage de la bonne légende */
+#slide1:checked ~ .captions p:nth-child(1),
+#slide2:checked ~ .captions p:nth-child(2),
+#slide3:checked ~ .captions p:nth-child(3),
+#slide4:checked ~ .captions p:nth-child(4),
+#slide5:checked ~ .captions p:nth-child(5),
+#slide6:checked ~ .captions p:nth-child(6) {
+    display: block;
+}
